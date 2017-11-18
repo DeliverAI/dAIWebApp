@@ -1,21 +1,24 @@
-:root{
+:root {
   --headingFont: "Poppins";
   --bodyFont: "Muli";
 }
+
 @font-face {
-    font-family: 'BebasNeueRegular';
-    src: url('fonts/BebasNeue-Regular.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'BebasNeueRegular';
+  src: url('fonts/BebasNeue-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
-body:{
+
+body: {
   overflow-y: hidden;
 }
 
-.noPadding{
+.noPadding {
   padding: 0;
 }
-.backgroundPic{
+
+.backgroundPic {
   width: 100%;
   height: 100vh;
   filter: brightness(40%);
@@ -25,43 +28,33 @@ body:{
   opacity: 0.8;
 }
 
-.logoFormat{
-  margin-top: 5%;
+.logoFormat {
+  margin-top: 1%;
   margin-left: 10%;
   margin-right: 10%;
   background-color: black;
   text-align: center;
 }
 
-.logoProperties{
+.logoProperties {
   width: 250px;
   height: 65px;
 }
 
-.signUpBox{
+.signUpBox {
   margin-left: 10%;
   margin-right: 10%;
-  height: 70vh;
+  height: 88vh;
   border: solid 2px black;
 }
 
-.signUpTitle{
+.signUpTitle {
   text-align: center;
   font-family: "BebasNeueRegular";
   font-size: 40px;
 }
 
-.webcamImage{
-  text-align: center;
-  margin: auto;
-  border: solid black;
-  border-radius: 100%;
-  width: 225px;
-  height: 225px;
-  background-image:url();
-}
-
-.webcamBtn{
+.webcamBtn {
   margin-top: 170px;
   width: 50px;
   height: 50px;
@@ -71,17 +64,15 @@ body:{
   outline: none;
 }
 
-.webcamBtn:hover{
+.webcamBtn:hover {
   border-color: grey;
 }
 
 #snapshots {
-  height: 120px;
+  height: 115px;
   margin: 0.5em 0;
   padding: 3px;
-
   border: 1px solid #aaa;
-
   white-space: nowrap;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -93,7 +84,6 @@ body:{
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
-
   height: 100%;
   margin-left: 3px;
   border: 3px solid transparent;
@@ -103,10 +93,10 @@ body:{
   border: 3px solid #000;
 }
 
-.signUpInput{
+.signUpInput {
   font-family: var(--headingFont);
   height: 25px;
-  margin-top: 3%;
+  margin-top: 2%;
   padding-top: 5px;
   padding-bottom: 5px;
   border: solid 1px black;
@@ -115,18 +105,25 @@ body:{
   border-radius: 10px;
 }
 
-.signUpInputFormat{
-  margin-top: 2%;
+.signUpInputFormat {
   text-align: center;
 }
 
-.submitBtn{
+.submitBtn {
+  width: 90px;
+  height: 40px;
+  font-family:var(--headingFont);
   margin-top: 5%;
+  border-radius: 10px;
+  outline: none;
+  background-color: black;
+  color: #a9d18e;
 }
 
-.centa{
+.centa {
   text-align: center;
 }
+
 .centaa {
   margin: auto;
   width: 225px;
@@ -149,4 +146,18 @@ body:{
 
 #camera .placeholder {
   padding: 0.5em;
+}
+
+.repeatBtn{
+  margin-top: 170px;
+  width: 50px;
+  height: 50px;
+  border: solid 5px red;
+  border-radius: 100%;
+  background-color: white;
+  outline: none;
+}
+
+.repeatBtn:hover{
+  border-color: grey;
 }

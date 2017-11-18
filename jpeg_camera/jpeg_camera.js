@@ -106,6 +106,17 @@
     JpegCamera.prototype.show_stream = function() {
       this._engine_show_stream();
       this._displayed_snapshot = null;
+      var id, snapshot, _ref;
+      if (this._displayed_snapshot) {
+        this.show_stream();
+      }
+      _ref = this._snapshots;
+      for (id in _ref) {
+        snapshot = _ref[id];
+        this._engine_discard(snapshot);
+        snapshot._discarded = true;
+      }
+      this._snapshots = {};
       return this;
     };
 
@@ -283,7 +294,7 @@
         this.message.style.paddingRight = "" + horizontal_padding + "px";
         this.message.style.position = "absolute";
         this.message.style.zIndex = 3;
-        this.message.innerHTML = "Please allow camera access when prompted by the browser.<br><br>" + "Look for camera icon around your address bar.";
+        this.message.innerHTML = "Please allow camera access.<br><br>" + "Look for camera icon around your address bar.";
         this.container.appendChild(this.message);
         this.video_container = document.createElement("div");
         this.video_container.style.width = "" + this.view_width + "px";
@@ -330,7 +341,7 @@
         };
         failure = function(error) {
           var code, key, value;
-          that.message.innerHTML = "<span style=\"color: red;\">" + "You have denied camera access." + "</span><br><br>" + "Look for camera icon around your address bar to change your " + "decision.";
+          that.message.innerHTML = "<span style=\"color: red;\">" + "You have denied camera access." + "</span><br><br>" + "Click camera icon at address bar to change your " + "decision.";
           code = error.code;
           for (key in error) {
             value = error[key];
