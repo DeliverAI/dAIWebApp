@@ -17,7 +17,7 @@ body:{
 }
 .backgroundPic{
   width: 100%;
-  height: 675px;
+  height: 100vh;
   filter: brightness(40%);
   background-repeat: round;
   background-size: contain;
@@ -41,7 +41,7 @@ body:{
 .signUpBox{
   margin-left: 10%;
   margin-right: 10%;
-  height: 555px;
+  height: 70vh;
   border: solid 2px black;
 }
 
@@ -52,6 +52,7 @@ body:{
 }
 
 .webcamImage{
+  text-align: center;
   margin: auto;
   border: solid black;
   border-radius: 100%;
@@ -61,28 +62,45 @@ body:{
 }
 
 .webcamBtn{
-  position:absolute;
-  margin-left: 31.5%;
-  bottom: 43%;
+  margin-top: 170px;
   width: 50px;
   height: 50px;
-  border: solid 5px grey;
+  border: solid 5px black;
   border-radius: 100%;
   background-color: white;
   outline: none;
 }
 
 .webcamBtn:hover{
-  border-color: black;
+  border-color: grey;
 }
 
-.imageOptions{
-  display:inline-block;
-  margin: auto;
-  margin-top: 3%;
-  height: 80px;
-  width: 80px;
-  border: solid black 2px;
+#snapshots {
+  height: 120px;
+  margin: 0.5em 0;
+  padding: 3px;
+
+  border: 1px solid #aaa;
+
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#snapshots canvas, #snapshots img {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+
+  height: 100%;
+  margin-left: 3px;
+  border: 3px solid transparent;
+}
+
+#snapshots .selected {
+  border: 3px solid #000;
 }
 
 .signUpInput{
@@ -108,4 +126,27 @@ body:{
 
 .centa{
   text-align: center;
+}
+.centaa {
+  margin: auto;
+  width: 225px;
+  height: 225px;
+}
+
+#camera {
+  width: 225px;
+  height: 225px;
+}
+
+.circleCamera {
+  text-align: center;
+  position: absolute;
+  z-index: 10;
+  width: 225px;
+  height: 225px;
+  background-image: url("/images/circle.png");
+}
+
+#camera .placeholder {
+  padding: 0.5em;
 }
