@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: 'BebasNeueRegular';
-    src: url('fonts/BebasNeue-Regular.otf') format('truetype');
+    src: url('../fonts/BebasNeue-Regular.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -102,7 +102,7 @@ body{
   background-repeat:no-repeat;
   width: 300px;
   height: 45px;
-  background-image:url("images/optionLine.PNG");
+  background-image:url("../images/optionLine.PNG");
 }
 
 .centa{
