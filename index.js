@@ -21,6 +21,14 @@ $(document).ready(function(){
       address: address_value,
       phone_number: phone_value
     });
+
+    var whoOrderedRef = firebaseRef.child("who_ordered");
+    whoOrderedRef.set({
+      name: name_value,
+      phone_number: phone_value,
+      address: address_value,
+      order_made: false
+    });
   }
 
   function whichButton(state){
