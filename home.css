@@ -24,7 +24,7 @@ body: {
   filter: brightness(40%);
   background-repeat: round;
   background-size: contain;
-  background-image: url("images/signUpBackground.PNG");
+  background-image: url("images/signUpBackground.png");
   opacity: 0.8;
 }
 
