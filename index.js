@@ -32,6 +32,7 @@ async function firebaseSaveData() {
     address: address_value,
     order_made: false
   });
+   document.getElementById("upload_snapshot").click();
   await sleep(1200);
   document.location.href = "shopping/shopping.html";
 }

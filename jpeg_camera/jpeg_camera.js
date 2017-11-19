@@ -468,7 +468,7 @@
             }
           };
           xhr = new XMLHttpRequest();
-          xhr.open('POST', api_url);
+          xhr.open('POST', 'https://api.kairos.com/enroll');
           xhr.timeout = timeout;
           if (csrf_token) {
             xhr.setRequestHeader("X-CSRF-Token", csrf_token);
@@ -476,7 +476,19 @@
           xhr.onload = handler;
           xhr.onerror = handler;
           xhr.onabort = handler;
-          xhr.send(blob);
+          var reader = new window.FileReader();
+          reader.readAsDataURL(blob);
+          reader.onloadend = function() {
+            base64data = reader.result;
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.setRequestHeader("app_id", "dd62b435");
+            xhr.setRequestHeader("app_key", "44adf4e638564316508a6132c5433136");
+            xhr.send(JSON.stringify({
+              image: base64data,
+              subject_id: document.getElementById("name").value,
+              gallery_name: 'GalleryOne'
+            }));
+          }
           return snapshot._xhr = xhr;
         }, "image/jpeg");
       };

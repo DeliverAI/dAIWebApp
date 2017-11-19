@@ -30,6 +30,7 @@ $(function() {
     };
 
     var add_snapshot = function(element) {
+      // console.log(element);
       $(element).data("snapshot", this).addClass("item");
 
       var $container = $("#snapshots").append(element);
@@ -50,6 +51,7 @@ $(function() {
     var select_snapshot = function () {
       $(".item").removeClass("selected");
       var snapshot = $(this).addClass("selected").data("snapshot");
+      // console.log(snapshot);
       $("#discard_snapshot, #upload_snapshot, #api_url").show();
       snapshot.show();
       $("#show_stream").show();
@@ -60,19 +62,20 @@ $(function() {
     };
 
     var upload_snapshot = function() {
-      var api_url = $("#api_url").val();
+      // var api_url = $("#api_url").val();
 
-      if (!api_url.length) {
-        $("#upload_status").html("Please provide URL for the upload");
-        return;
-      }
+      // if (!api_url.length) {
+      //   $("#upload_status").html("Please provide URL for the upload");
+      //   return;
+      // }
 
       clear_upload_data();
-      $("#loader").show();
+      // $("#loader").show();
       $("#upload_snapshot").prop("disabled", true);
 
       var snapshot = $(".item.selected").data("snapshot");
-      snapshot.upload({api_url: api_url}).done(upload_done).fail(upload_fail);
+      console.log(snapshot);
+      snapshot.upload({api_url: "example"}).done(upload_done).fail(upload_fail);
     };
 
     var upload_done = function(response) {
