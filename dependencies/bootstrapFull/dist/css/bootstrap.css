@@ -4459,7 +4459,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-nav > li > .dropdown-menu {
-  margin-top: 18px;
+  margin-top: 2px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
