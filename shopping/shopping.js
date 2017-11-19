@@ -12,5 +12,5 @@ async function firebaseShop(){
     order_made: true
   });
   await sleep(1200);
-  document.location.href = "confirmation/confirmation.html";
+  document.location.href = "../confirmation/confirmation.html";
 }
