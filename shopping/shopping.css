@@ -159,7 +159,6 @@ nav{
 }
 
 .itemBtn{
-  font-weight: 800;
   border:none;
   margin-top: 5%;
   border-radius: 10px;
@@ -186,5 +185,21 @@ nav{
 }
 
 .bumpDown{
-  margin-top:2  %;
+  margin-top:2%;
+}
+
+.backBtn{
+  border:solid 2px black;
+  margin-left: -7%;
+  border-radius: 10px;
+  font-family: var(--headingFont);
+  color: black;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  background-color:white;
+}
+
+.backBtn:hover{
+  background-color: #bbb;
 }
